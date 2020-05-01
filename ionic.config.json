@@ -1,0 +1,7 @@
+{
+  "name": "HelpingHandApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
