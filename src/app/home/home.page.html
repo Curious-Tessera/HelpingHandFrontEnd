@@ -1,20 +1,67 @@
-<ion-tabs>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Helping Hand
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="feed">
-      <ion-icon name="paper"></ion-icon>
-      <ion-label>Feed</ion-label>
-    </ion-tab-button>
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Helping Hand</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
 
-    <ion-tab-button tab="chat">
-      <ion-icon name="send"></ion-icon>
-      <ion-label>Chat</ion-label>
-    </ion-tab-button>
+<ion-content>
 
-    <ion-tab-button tab="notifications">
-      <ion-icon name="notifications"></ion-icon>
-      <ion-label>Notifications</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
 
-</ion-tabs>
+
+  <form  onsubmit="processForm(event)">
+
+    <!-- <ion-item>
+      <ion-label  position="floating">Type</ion-label>
+      <ion-input placeholder ="type"></ion-input>
+      <ion-label position="floating">Type</ion-label>
+      <ion-input placeholder ="type"></ion-input>
+    </ion-item> -->
+    
+    <div class="ion-padding">
+      <ion-button  expand="block" type="submit" class="ion-no-margin" >COVID-19</ion-button>
+    </div>
+     
+    <!-- <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">view donations</ion-button>
+    </div> -->
+  
+  </form>
+
+  <ion-fab vertical ="top" horizontal="end" slot="fixed">
+    <ion-fab-button >
+      <ion-icon  name="chatbubbles-outline">
+      </ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button ><ion-icon name="mail-outline">
+   </ion-icon></ion-fab-button> 
+   </ion-fab-list>
+   <ion-fab-list side="start">
+     <ion-fab-button href="https://integrations.eu-gb.assistant.watson.cloud.ibm.com/web/public/dfe4b840-49bc-496c-a0b8-b2050701d031"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></ion-fab-button>
+   </ion-fab-list>
+  </ion-fab>
+  
+  <ion-fab vertical= "bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+       <ion-fab-button (click)="presentPopover()"><ion-icon name="logo-dropbox">
+    </ion-icon></ion-fab-button> 
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button (click)="presentservicePopover()" ><ion-icon name="people-circle-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+ 

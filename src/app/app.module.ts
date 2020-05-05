@@ -6,12 +6,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PopcverComponent } from './popcver/popcver.component';
+import { PopoverserviceComponent } from './popoverservice/popoverservice.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, PopcverComponent, PopoverserviceComponent],
+  entryComponents: [PopcverComponent, PopoverserviceComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
