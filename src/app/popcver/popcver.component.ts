@@ -12,10 +12,36 @@ export class PopcverComponent implements OnInit {
 
   async addDonations() {
     const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtiltle',
-      message: 'This is an alter message',
-      buttons: ['add']
+      header: 'Add Donation',
+      inputs: [
+        {
+          name: 'Type of Donation',
+          type: 'textarea',
+          placeholder: 'Medical supplier'
+        },
+        {
+          name: 'Quantity',
+          type: 'textarea',
+          placeholder: '30'
+        },
+        {
+          name: 'Name of the product',
+          type: 'textarea',
+          placeholder: 'Face mask'
+        },
+        {
+          name: 'Contact details',
+          type: 'textarea',
+          placeholder: 'example@helpinghand.org'
+        },
+        {
+          name: 'Description',
+          type: 'textarea',
+          placeholder: 'Cotton cloth mask for covering the face'
+        }
+    ],
+    
+    buttons: ['add']
 
     });
 
@@ -27,9 +53,7 @@ export class PopcverComponent implements OnInit {
 
   async viewDonations() {
     const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtiltle',
-      message: 'This is an alter message',
+      header: 'View by type',
       buttons: ['view']
 
     });
